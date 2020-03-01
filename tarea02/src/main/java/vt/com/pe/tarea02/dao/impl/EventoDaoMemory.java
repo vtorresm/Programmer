@@ -55,20 +55,20 @@ public class EventoDaoMemory implements EventoDao{
         lEvento.remove(find(id));
     }
     
-     @Override
-    public List<Evento> filterByEstado(String estado) {
-        List<Evento> subList=new ArrayList<>();
-        for(Evento a:lEvento){
-            if(a.getEstado().equals(estado))
-                subList.add(a);
-        }
-        return subList;
-    }
-
-    @Override
-    public List<Evento> orderByPromedio() {
-        return null;
-    }
+//     @Override
+//    public List<Evento> filterByEstado(String estado) {
+//        List<Evento> subList=new ArrayList<>();
+//        for(Evento a:lEvento){
+//            if(a.getEstado().equals(estado))
+//                subList.add(a);
+//        }
+//        return subList;
+//    }
+//
+//    @Override
+//    public List<Evento> orderByPromedio() {
+//        return null;
+//    }
 
     @Override
     public List<Evento> orderByNombre() {

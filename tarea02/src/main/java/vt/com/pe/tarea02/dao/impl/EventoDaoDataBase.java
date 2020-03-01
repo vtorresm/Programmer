@@ -12,15 +12,15 @@ import vt.com.pe.tarea02.dao.EventoDao;
  */
 public class EventoDaoDataBase implements EventoDao{
 
-    @Override
-    public List<Evento> filterByEstado(String estado) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public List<Evento> orderByPromedio() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    @Override
+//    public List<Evento> filterByEstado(String estado) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
+//
+//    @Override
+//    public List<Evento> orderByPromedio() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
     @Override
     public List<Evento> orderByNombre() {
