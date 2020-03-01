@@ -1,9 +1,9 @@
 package vt.com.pe.tarea02.dao.impl;
 
-import cjava.dao.AlumnoDao;
-import static cjava.util.Util.MEMORY;
-import static cjava.util.Util.FILE;
-import static cjava.util.Util.DB;
+import vt.com.pe.tarea02.dao.EventoDao;
+import static vt.com.pe.tarea02.util.Util.DB;
+import static vt.com.pe.tarea02.util.Util.FILE;
+import static vt.com.pe.tarea02.util.Util.MEMORY;
 /**
  *
  * @author emaravi
@@ -21,7 +21,7 @@ public class DaoFactory {
         private static final DaoFactory INSTANCE = new DaoFactory();
     }
     
-    public AlumnoDao getAlumnoDao(int tipo){
+    public EventoDao getEventoDao(int tipo){
         switch(tipo){
            case MEMORY: return new EventoDaoMemory();
            case FILE: return new EventoDaoFile();

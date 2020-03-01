@@ -1,52 +1,49 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vt.com.pe.tarea02.dao.impl;
 
-import cjava.beans.Alumno;
-import cjava.dao.AlumnoDao;
 import java.util.List;
+import vt.com.pe.tarea02.beans.Evento;
+import vt.com.pe.tarea02.dao.EventoDao;
+
+
 
 /**
  *
- * @author emaravi
+ * @author Victor
  */
-public class EventoDaoDataBase implements AlumnoDao{
+public class EventoDaoDataBase implements EventoDao{
 
     @Override
-    public List<Alumno> filterByEstado(String estado) {
+    public List<Evento> filterByEstado(String estado) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Alumno> orderByPromedio() {
+    public List<Evento> orderByPromedio() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Alumno> orderByNombre() {
+    public List<Evento> orderByNombre() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void create(Alumno t) {
+    public void create(Evento t) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Alumno find(Object id) {
+    public Evento find(Object id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Alumno> findAll() {
+    public List<Evento> findAll() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void update(Alumno t) {
+    public void update(Evento t) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
