@@ -7,6 +7,10 @@ import java.util.ResourceBundle;
  * @author Victor
  */
 public class Util {
+    
+    public static final double PLATINUM = 500.00;
+    public static final double GOLD = 350.00;
+    public static final double SILVER = 100.00;
 
     public static final int MEMORY = 0;
     public static final int FILE = 1;
