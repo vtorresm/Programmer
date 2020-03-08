@@ -7,10 +7,6 @@ import vt.com.pe.practica02.service.ProductoService;
 import static vt.com.pe.practica02.util.Util.opc;
 import vt.com.pe.practica02.dao.impl.DaoFactory;
 
-/**
- *
- * @author emaravi
- */
 public class ProductoServiceImpl implements ProductoService{
     private ProductoDao dao;
 
