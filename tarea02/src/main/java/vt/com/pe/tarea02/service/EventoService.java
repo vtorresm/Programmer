@@ -19,9 +19,7 @@ public interface EventoService {
 
     public void borrar(Object id);
 
-    public List<Evento> filtrarPoEstado(String estado);
-
-    public List<Evento> ordenarPorPromedio();
+    public List<Evento> filtrarPoCategoria(String categoria);
 
     public List<Evento> ordenarPorNombre();
 }

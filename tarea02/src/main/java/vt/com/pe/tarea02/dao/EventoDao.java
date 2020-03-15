@@ -12,4 +12,6 @@ public interface EventoDao extends EntidadDao<Evento>{
     //public List<Evento> orderByFechaAscDesc();
     //public List<Evento> orderByFechaRango();
     public List<Evento> orderByNombre();
+    public List<Evento> filterByCategoria(String categoria);
+    
 }

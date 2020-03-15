@@ -68,16 +68,16 @@ public class EventoDaoFile implements EventoDao{
         grabarEventos();
     }
     
-//     @Override
-//    public List<Evento> filterByEstado(String estado) {
-//        leerEventos();
-//        List<Evento> subList=new ArrayList<>();
-//        for(Evento a:lEvento){
-//            if(a.getEstado().equals(estado))
-//                subList.add(a);
-//        }
-//        return subList;
-//    }
+     @Override
+    public List<Evento> filterByCategoria(String categoria) {
+        leerEventos();
+        List<Evento> subList=new ArrayList<>();
+        for(Evento a:lEvento){
+            if(a.getCategoria().equals(categoria))
+                subList.add(a);
+        }
+        return subList;
+    }
 
 //    @Override
 //    public List<Evento> orderByPromedio() {

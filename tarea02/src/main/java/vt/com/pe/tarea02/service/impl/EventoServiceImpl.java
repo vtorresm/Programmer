@@ -5,6 +5,7 @@ import vt.com.pe.tarea02.beans.Evento;
 import vt.com.pe.tarea02.dao.EventoDao;
 import vt.com.pe.tarea02.dao.impl.DaoFactory;
 import vt.com.pe.tarea02.service.EventoService;
+import static vt.com.pe.tarea02.util.Util.opc;
 
 /**
  *
@@ -43,15 +44,10 @@ public class EventoServiceImpl implements EventoService{
         dao.delete(id);
     }
 
-//    @Override
-//    public List<Evento> filtrarPoEstado(String estado) {
-//        return dao.filterByEstado(estado);
-//    }
-
-//    @Override
-//    public List<Evento> ordenarPorPromedio() {
-//        return dao.orderByPromedio();
-//    }
+    @Override
+    public List<Evento> filtrarPoCategoria(String categoria) {
+        return dao.filterByCategoria(categoria);
+    }
 
     @Override
     public List<Evento> ordenarPorNombre() {
