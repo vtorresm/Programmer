@@ -9,7 +9,7 @@ import vt.com.pe.tarea02.beans.Evento;
  */
 public interface EventoDao extends EntidadDao<Evento>{
     //public List<Evento> filterByEstado(String estado);
-    public List<Evento> orderByFechaAscDesc();
-    public List<Evento> orderByFechaRango();
+    //public List<Evento> orderByFechaAscDesc();
+    //public List<Evento> orderByFechaRango();
     public List<Evento> orderByNombre();
 }

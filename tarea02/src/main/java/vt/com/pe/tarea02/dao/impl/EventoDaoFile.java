@@ -2,7 +2,6 @@ package vt.com.pe.tarea02.dao.impl;
 
 import vt.com.pe.tarea02.beans.Evento;
 import vt.com.pe.tarea02.dao.EventoDao;
-import vt.com.pe.tarea02.util.EventoOrdenPorNombre;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
@@ -14,6 +13,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.StringTokenizer;
+import vt.com.pe.tarea02.util.EventoOrdenadoPorCategoria;
 
 /**
  *
@@ -88,7 +88,7 @@ public class EventoDaoFile implements EventoDao{
     @Override
     public List<Evento> orderByNombre() {
         leerEventos();
-        Comparator<Evento> sortName = new EventoOrdenPorNombre();
+        Comparator<Evento> sortName = new EventoOrdenadoPorCategoria();
          Collections.sort(lEvento, sortName);  
         return lEvento;
     }
@@ -98,8 +98,10 @@ public class EventoDaoFile implements EventoDao{
         try (BufferedWriter bufOutput = new BufferedWriter(new FileWriter("eventos.txt"))) {
             for(Evento evento:lEvento){
                 linea = evento.getId()+","+evento.getNombre()+","+
-                        evento.isGenero()+","+evento.getPromedio()+","+
-                        evento.getEstado();
+                        evento.getFecha()+","+evento.getDireccion()+","+
+                        evento.getCapacidad()+","+
+                        evento.getCategoria()+","+
+                        evento.getCosto();
                 bufOutput.write(linea);
                 bufOutput.newLine();
             }
@@ -111,7 +113,7 @@ public class EventoDaoFile implements EventoDao{
     }
     
     private void leerEventos(){
-        try (BufferedReader bufInput = new BufferedReader(new FileReader("alumnos.txt"))) {
+        try (BufferedReader bufInput = new BufferedReader(new FileReader("eventos.txt"))) {
             String linea;
             lEvento.clear();
             Evento evento;
@@ -120,14 +122,17 @@ public class EventoDaoFile implements EventoDao{
                 evento = new Evento();
                 evento.setId(Integer.parseInt(tokens.nextToken().trim()));
                 evento.setNombre(tokens.nextToken().trim());
-                evento.setGenero(Boolean.parseBoolean(tokens.nextToken().trim()));
-                evento.setPromedio(Double.parseDouble(tokens.nextToken().trim()));
-                evento.add(evento);
+                evento.setFecha(tokens.nextToken().trim());
+                evento.setDireccion(tokens.nextToken().trim());
+                evento.setCapacidad(Integer.parseInt(tokens.nextToken().trim()));
+                evento.setCategoria(tokens.nextToken().trim());
+                evento.setCosto(Double.parseDouble(tokens.nextToken().trim()));
+                lEvento.add(evento);
             }
         } catch (FileNotFoundException f) {
             System.out.println("[leer]Archivo no encontrado: " + f);
         } catch (IOException e) {
-            System.out.println("No se pudeo leer alumno.txt: " + e);
+            System.out.println("No se pudeo leer eventos.txt: " + e);
         }
     }
 }

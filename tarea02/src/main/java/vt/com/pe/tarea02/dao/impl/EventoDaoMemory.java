@@ -7,6 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 import vt.com.pe.tarea02.beans.Evento;
 import vt.com.pe.tarea02.dao.EventoDao;
+import vt.com.pe.tarea02.util.EventoOrdenadoPorCategoria;
 
 /**
  *
@@ -72,7 +73,7 @@ public class EventoDaoMemory implements EventoDao{
 
     @Override
     public List<Evento> orderByNombre() {
-        Comparator<Evento> sortName = new EventoOrdenPorNombre();
+        Comparator<Evento> sortName = new EventoOrdenadoPorCategoria();
          Collections.sort(lEvento, sortName);  
         return lEvento;
     }
